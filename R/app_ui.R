@@ -10,7 +10,16 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
-      h1("fractals")
+      theme = bslib::bs_theme(version = 4, bootswatch = "minty"),
+      h1("fractals"),
+      sidebarPanel(
+        selectInput("fractal", "Choose a fractal", choices = c("hilbert" = "Hilbert curve")),
+        sliderInput("refraction", "Refractions", min = 1, max = 10, value = 1, step = 1)
+      ),
+      mainPanel(
+        plotOutput("fplot")
+      )
+
     )
   )
 }

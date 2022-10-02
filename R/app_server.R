@@ -3,7 +3,16 @@
 #' @param input,output,session Internal parameters for {shiny}.
 #'     DO NOT REMOVE.
 #' @import shiny
+#' @importFrom ggplot2 ggplot
+#' @importFrom ggplot2 geom_path
 #' @noRd
 app_server <- function(input, output, session) {
-  # Your application server logic
+
+  fractal <- reactive({
+    hilbert_curve(input$refraction)
+  })
+
+  output$fplot <- renderPlot({
+    ffplot(fractal())
+  })
 }
