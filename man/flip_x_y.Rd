@@ -2,13 +2,16 @@
 % Please edit documentation in R/fct_hilbert.R
 \name{flip_x_y}
 \alias{flip_x_y}
-\title{Title}
+\title{Flip the data along the diagonal between the left-lower and right-upper corner}
 \usage{
 flip_x_y(df)
 }
 \arguments{
-\item{df}{}
+\item{df}{tibble with the columns x and y}
+}
+\value{
+The flipped tibble
 }
 \description{
-Title
+Flip the data along the diagonal between the left-lower and right-upper corner
 }

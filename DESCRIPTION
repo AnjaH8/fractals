@@ -1,6 +1,6 @@
 Package: fractals
 Title: FRACTALS
-Version: 0.0.0.9000
+Version: 0.9
 Authors@R: person('Anja', 'Herdtfelder', email = 'anja@herdtfelder.de', role = c('cre', 'aut'))
 Description: Shiny app to visualise fractals
 License: MIT + file LICENSE

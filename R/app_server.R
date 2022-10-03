@@ -9,10 +9,10 @@
 app_server <- function(input, output, session) {
 
   fractal <- reactive({
-    hilbert_curve(input$refraction)
+    hilbert_curve(input$iteration)
   })
 
   output$fplot <- renderPlot({
     ffplot(fractal())
-  })
+  }, width = 500, height = 500)
 }
